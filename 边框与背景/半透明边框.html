@@ -1,0 +1,39 @@
+
+<!-- 默认情况下，背景的颜色会延伸至边框下层，这意味着我们设置的透明边框效果会被覆盖掉，
+在css3中，我们可以通过设置background-clip:padding-box来改变背景的默认行为，达到我们想要的效果。 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            width: 100%;
+            padding: 60px 80px 60px;
+            background: #b4a078;
+            
+        }
+        div {
+            padding: 12px;
+            margin: 20px auto;
+            background: white;
+            border: 10px solid rgba(224, 211, 211, 0.5);
+        }
+        label {
+            color: #f4f0ea;
+        }
+        input[id='pb']:checked ~ div {
+            background-clip: padding-box;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <input type="checkbox" id="pb" checked>
+        <label for="pb">padding-box(默认）</label>
+        <div>This is a test for padding-box</div>
+    </main>
+</body>
+</html>
