@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度导航栏</title>
+    <style>
+        body {
+            background-color: rgb(179, 176, 176);
+        }
+
+        .head {
+            background-color: #fff;
+            height: 60px;
+            width: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #222;
+            font-size: 13px;
+        }
+
+        .head .top-left {
+            float: left;
+        }
+        .head .top-left li {
+           padding: 0 15px;
+           line-height: 60px;
+           float: left;
+        }
+        .head .top-right {
+            float: right;
+        }
+
+        .head .top-right li {
+            padding: 0 15px;
+            line-height: 60px;
+            float: left;
+        }
+        .login {
+            display: inline-block;
+            line-height: 24px;
+            height: 24px;
+            width: 48px;
+            background-color: #4E6EF2;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        .top-left li a:hover,.top-right:first-child:hover{
+            color: #4E6EF2;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="head">
+        <ul class="top-left">
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">hao123</a></li>
+            <li><a href="#">地图</a></li>
+            <li><a href="#">贴吧</a></li>
+            <li><a href="#">视频</a></li>
+            <li><a href="#">图片</a></li>
+            <li><a href="#">网盘</a></li>
+            <li><a href="#">更多</a></li>
+        </ul>
+        <ul class="top-right">
+                <li><a href="#">设置</a></li>
+                <li><a href="#" class="login">登录</a></li>
+        </ul>
+        
+    </div>
+</body>
+</html>
