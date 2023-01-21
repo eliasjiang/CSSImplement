@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+        }
+        li {
+            list-style: none;
+        }
+
+        .nav {
+            background-color: rgba(0, 0, 0, .85);
+            width: 100%;
+            height: 65px;
+        }
+        .logo {
+            float: left;
+            width: 34px;
+            height: 34px;
+            background-color: pink;
+            margin-left: 160px;
+            margin-top: 16px;
+        }
+
+        .logo img {
+            width: 34px;
+            height: 34px;
+        }
+        
+        .list {
+            float: left;
+            margin-left: 250px;
+        }
+        .list li {
+            float: left;
+            padding: 0 20px;
+            line-height: 65px;
+        }
+        .list li:first-child {
+            color: #FF6900;
+        }
+        .list li:hover a {
+            color: #FF6900;
+        }
+        .func li:hover a {
+            color: #FF6900;
+        }
+        .func {
+            float: right;
+            margin-right: 150px;
+        }
+        .func li {
+            float: left;
+            padding: 0 20px;
+            line-height: 65px;
+        }
+
+        .func span {
+            float: left;
+            color: #fff;
+            line-height: 65px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <a href="#"><img src="logo.jpeg" alt=""></a>
+        </div>
+        <ul class="list">
+            <li><a href="#">小米官网</a></li>
+            <li><a href="#">小米商城</a></li>
+            <li><a href="#">小米影像</a></li>
+            <li><a href="#">MIUI</a></li>
+            <li><a href="#">IoT</a></li>
+            <li><a href="#">云服务</a></li>
+            <li><a href="#">天星数科</a></li>
+            <li><a href="#">有品</a></li>
+            <li><a href="#">小爱开发平台</a></li>
+            <li><a href="#">企业团购</a></li>
+        </ul>
+        <ul class="func">
+            <li class="login"><a href="#">登录</a></li>
+            <span>|</span>
+            <li><a href="#">注册</a></li>
+        </ul>
+    </div>
+</body>
+</html>
