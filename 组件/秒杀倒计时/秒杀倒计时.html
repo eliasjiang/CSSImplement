@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秒杀倒计时</title>
+    <style>
+        div {
+            width: 120px;
+            margin: 100px auto;
+        }
+        span {
+            float: left;
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background-color: black;
+            color:white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+    </div>
+    <script>
+        let hour = document.querySelector('.hour');
+        let minute = document.querySelector('.minute');
+        let second = document.querySelector('.second');
+        
+        let inputTime = new Date('2023-1-29 22:00:00');
+        countDown();
+        setInterval(countDown,1000);
+        function countDown(){
+            let nowTime = new Date();
+            let times = (inputTime - nowTime)/1000;
+            let h = parseInt(times/60/60%24);
+            h = h <10?'0' + h : h;
+            hour.innerHTML = h;
+            let m = parseInt(times/60%60);
+            m = m <10?'0' + m:m;
+            minute.innerHTML = m;
+            let s = parseInt(times%60);
+            s = s <10?'0'+s:s;
+            second.innerHTML = s;
+        }
+    </script>
+</body>
+</html>

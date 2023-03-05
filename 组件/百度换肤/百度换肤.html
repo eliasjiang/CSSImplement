@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度换肤</title>
+    <style>
+        div {
+            box-sizing: border-box;
+        }
+        .box {
+            width: 500px;
+            margin: 100px auto;
+        }
+        .box img {
+            display: block;
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="1.jpg" alt="">
+        <img src="2.jpg" alt="">
+        <img src="3.jpg" alt="">
+        <img src="4.jpg" alt="">
+    </div>
+
+    <script>
+        let btns = document.querySelectorAll('img');
+        for(let i = 0;i<btns.length;i++){
+            btns[i].onclick = function(){
+                for(let j=0;j<btns.length;j++){
+                    btns[j].style.border = '';
+                }
+                this.style.border = '1px solid red';
+                document.body.style.background = 'url(' + this.src + ') no-repeat';
+            }
+        }
+    </script>
+</body>
+</html>
